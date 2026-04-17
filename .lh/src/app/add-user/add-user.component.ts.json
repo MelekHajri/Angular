@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/add-user/add-user.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1776452327764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1776452327764,
+            "name": "Commit-0",
+            "content": "import {Component, OnInit} from '@angular/core';\nimport {FormControl, FormGroup, Validators} from '@angular/forms';\n\n@Component({\n  selector: 'app-add-user',\n  templateUrl: './add-user.component.html',\n  styleUrl: './add-user.component.css'\n})\nexport class AddUserComponent implements OnInit {\n  genders = ['female', 'male'];\n  signupForm!: FormGroup;\n\n  get username() {\n    return this.signupForm.get('username');\n  }\n\n  get email() {\n    return this.signupForm.get('email');\n  }\n\n  ngOnInit() {\n    this.signupForm = new FormGroup({\n      'username': new FormControl('', [Validators.required, Validators.minLength(5)]),\n      'email': new FormControl('', [Validators.required, Validators.email]),\n      'gender': new FormControl('female'),\n      'userdata': new FormGroup({\n        'fb': new FormControl('', Validators.required),\n        'age': new FormControl('', Validators.min(18))\n      })\n    })\n  }\n\n}\n"
+        }
+    ]
+}
