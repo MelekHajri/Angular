@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/app/app-routing.module.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1776448371313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1776448388286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,20 +10,8 @@\n import {SetttingsComponent} from './users/setttings/setttings.component';\n import {UserComponent} from './user/user.component';\n import {AddUserComponent} from './add-user/add-user.component';\n \n-import {NgModule} from '@angular/core';\n-import {RouterModule, Routes} from '@angular/router';\n-import {HomeComponent} from './home/home.component';\n-import {ServerComponent} from './server/server.component';\n-import {ServersComponent} from './servers/servers.component';\n-import {UsersComponent} from './users/users.component';\n-import {NotFoundComponent} from './not-found/not-found.component';\n-import {ProfileComponent} from './profile/profile.component';\n-import {ActivityComponent} from './users/activity/activity.component';\n-import {SetttingsComponent} from './users/setttings/setttings.component';\n-import {UserComponent} from './user/user.component';\n-\n const routes: Routes = [\n   {path: '', redirectTo: 'home', pathMatch: 'full'},\n   {path: 'home', component: HomeComponent},\n   {path: 'server', component: ServerComponent},\n"
+                },
+                {
+                    "date": 1776448518463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,39 @@\n+import { NgModule } from '@angular/core';\n+import { RouterModule, Routes } from '@angular/router';\n+import { HomeComponent } from './home/home.component';\n+import { ServerComponent } from './server/server.component';\n+import { ServersComponent } from './servers/servers.component';\n+import { UsersComponent } from './users/users.component';\n+import { NotFoundComponent } from './not-found/not-found.component';\n+import { ProfileComponent } from './profile/profile.component';\n+import { ActivityComponent } from './users/activity/activity.component';\n+import { SetttingsComponent } from './users/setttings/setttings.component';\n+import { UserComponent } from './user/user.component';\n+\n+const routes: Routes = [\n+  {path: '', redirectTo: 'home', pathMatch: 'full'},\n+  {path: 'home', component: HomeComponent},\n+  {path: 'server', component: ServerComponent},\n+  {path: 'servers', component: ServersComponent},\n+  {\n+    path: 'users', component: UsersComponent, children: [\n+      {\n+        path: 'activity', component: ActivityComponent\n+      },\n+      {path: 'settings', component: SetttingsComponent}\n+    ]\n+  },\n+  {path: 'profile', component: ProfileComponent, data: {title1: 'Bonjour, je suis le composant Profile'}},\n+  {path: 'user/:id/:name', component: UserComponent},\n+  {\n+    path: 'login', loadChildren: () =>\n+      import('./login/login.module').then((m) => m.LoginModule),\n+  },\n+  {path: '**', component: NotFoundComponent}\n+];\n+\n+@NgModule({\n+  imports: [RouterModule.forRoot(routes)],\n+  exports: [RouterModule],\n+})\n+export class AppRoutingModule {}\n"
+                }
+            ],
+            "date": 1776448371313,
+            "name": "Commit-0",
+            "content": "import {NgModule} from '@angular/core';\nimport {RouterModule, Routes} from '@angular/router';\nimport {HomeComponent} from './home/home.component';\nimport {ServerComponent} from './server/server.component';\nimport {ServersComponent} from './servers/servers.component';\nimport {UsersComponent} from './users/users.component';\nimport {NotFoundComponent} from './not-found/not-found.component';\nimport {ProfileComponent} from './profile/profile.component';\nimport {ActivityComponent} from './users/activity/activity.component';\nimport {SetttingsComponent} from './users/setttings/setttings.component';\nimport {UserComponent} from './user/user.component';\nimport {AddUserComponent} from './add-user/add-user.component';\n\n\nconst routes: Routes = [\n  {path: '', redirectTo: 'home', pathMatch: 'full'},\n  {path: 'home', component: HomeComponent},\n  {path: 'server', component: ServerComponent},\n  {path: 'servers', component: ServersComponent},\n  {\n    path: 'users', component: UsersComponent, children: [\n      {\n        path: 'activity', component: ActivityComponent\n      },\n      {path: 'settings', component: SetttingsComponent}\n    ]\n  },\n  {path: 'profile', component: ProfileComponent, data: {title1: 'Bonjour, je suis le composant Profile'}},\n  {path: 'user/:id/:name', component: UserComponent},\n  {\n    path: 'login', loadChildren: () =>\n      import('./login/login.module').then((m) => m.LoginModule),\n  },\n  {path: 'add', component: AddUserComponent},\n  {path: '**', component: NotFoundComponent}\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n}\n"
+        }
+    ]
+}

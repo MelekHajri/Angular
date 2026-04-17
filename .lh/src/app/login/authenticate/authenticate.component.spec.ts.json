@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/login/authenticate/authenticate.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1776449159586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1776449159586,
+            "name": "Commit-0",
+            "content": "import { ComponentFixture, TestBed } from '@angular/core/testing';\n\nimport { AuthenticateComponent } from './authenticate.component';\n\ndescribe('AuthenticateComponent', () => {\n  let component: AuthenticateComponent;\n  let fixture: ComponentFixture<AuthenticateComponent>;\n\n  beforeEach(async () => {\n    await TestBed.configureTestingModule({\n      declarations: [AuthenticateComponent]\n    })\n    .compileComponents();\n\n    fixture = TestBed.createComponent(AuthenticateComponent);\n    component = fixture.componentInstance;\n    fixture.detectChanges();\n  });\n\n  it('should create', () => {\n    expect(component).toBeTruthy();\n  });\n});\n"
+        }
+    ]
+}

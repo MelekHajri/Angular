@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/login/authenticate/authenticate.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1776449174985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1776449174985,
+            "name": "Commit-0",
+            "content": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-authenticate',\n  templateUrl: './authenticate.component.html',\n  styleUrl: './authenticate.component.css'\n})\nexport class AuthenticateComponent {\n\n}\n"
+        }
+    ]
+}

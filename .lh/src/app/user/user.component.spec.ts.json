@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/app/user/user.component.spec.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1776449591471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1776449597571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n import { ComponentFixture, TestBed } from '@angular/core/testing';\n+import { UserComponent } from './user.component';\n"
+                },
+                {
+                    "date": 1776449608670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,9 @@\n import { ComponentFixture, TestBed } from '@angular/core/testing';\n import { UserComponent } from './user.component';\n+describe('UserComponent', () => {\n+  let component: UserComponent;\n+  let fixture: ComponentFixture<UserComponent>;\n+\n+  beforeEach(async () => {\n+    await TestBed.configureTestingModule({\n+      \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1776449615828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,8 @@\n   let fixture: ComponentFixture<UserComponent>;\n \n   beforeEach(async () => {\n     await TestBed.configureTestingModule({\n-      \n\\ No newline at end of file\n+      declarations: [UserComponent]\n+    })\n+    .compileComponents();\n+    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1776449622922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,8 @@\n     await TestBed.configureTestingModule({\n       declarations: [UserComponent]\n     })\n     .compileComponents();\n-    \n\\ No newline at end of file\n+    fixture = TestBed.createComponent(UserComponent);\n+    component = fixture.componentInstance;\n+    fixture.detectChanges();\n+  });\n"
+                }
+            ],
+            "date": 1776449591471,
+            "name": "Commit-0",
+            "content": "import { ComponentFixture, TestBed } from '@angular/core/testing';\n"
+        }
+    ]
+}

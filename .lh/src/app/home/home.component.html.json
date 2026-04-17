@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/home/home.component.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1776449062906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1776449062906,
+            "name": "Commit-0",
+            "content": "<p>hi from home</p>\n"
+        }
+    ]
+}

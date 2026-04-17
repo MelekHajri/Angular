@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/app/server/server.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1776449464308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1776449473740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,8 @@\n   templateUrl: './server.component.html',\n   styleUrl: './server.component.css'\n })\n export class ServerComponent {\n+  serverID = 1;\n+  serverStatus = \"offline\";\n+  serverCreationStatus = false;\n+  \n"
+                },
+                {
+                    "date": 1776449483588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,14 @@\n export class ServerComponent {\n   serverID = 1;\n   serverStatus = \"offline\";\n   serverCreationStatus = false;\n-  \n+  serverCreation = \"not created\";\n+  serverName = \"Server 1\";\n+  serverCreated = false;\n+\n+  getStatus() {\n+    return this.serverStatus;\n+  }\n+\n+  onCreateServer() {\n+    \n"
+                },
+                {
+                    "date": 1776449490181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,9 @@\n     return this.serverStatus;\n   }\n \n   onCreateServer() {\n-    \n+    this.serverCreation = \"created\";\n+    this.serverCreated = true;\n+    this.serverStatus = \"online\";\n+  }\n+}\n"
+                }
+            ],
+            "date": 1776449464308,
+            "name": "Commit-0",
+            "content": "import {Component, OnInit} from '@angular/core';\nimport {FormControl, Validators} from '@angular/forms';\n\n@Component({\n  selector: 'app-server',\n  templateUrl: './server.component.html',\n  styleUrl: './server.component.css'\n})\nexport class ServerComponent {\n"
+        }
+    ]
+}

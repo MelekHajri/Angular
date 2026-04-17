@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/nav-bar/nav-bar.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1776449347131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1776449347131,
+            "name": "Commit-0",
+            "content": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-nav-bar',\n  templateUrl: './nav-bar.component.html',\n  styleUrl: './nav-bar.component.css'\n})\nexport class NavBarComponent {\n\n}\n"
+        }
+    ]
+}

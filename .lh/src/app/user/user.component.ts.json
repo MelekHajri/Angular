@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/user/user.component.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1776449637477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1776449637477,
+            "name": "Commit-0",
+            "content": "import {Component, OnInit} from '@angular/core';\nimport {ActivatedRoute} from '@angular/router';\n\n@Component({\n  selector: 'app-user',\n  templateUrl: './user.component.html',\n  styleUrl: './user.component.css'\n})\nexport class UserComponent implements OnInit {\n  user!: {\n    id1: number;\n    name1: string;\n  }\n\n  constructor(private act: ActivatedRoute) {\n  }\n\n  ngOnInit() {\n    this.user = {\n      id1: this.act.snapshot.params['id'],\n      name1: this.act.snapshot.params['name']\n\n    }\n  }\n}\n"
+        }
+    ]
+}
